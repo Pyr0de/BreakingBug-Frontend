@@ -18,7 +18,8 @@ const ViewProductSeller = () => {
   const productID = params.id;
 
   const [showTab, setShowTab] = useState(false);
-
+  const buttonText = showTab ? 'Cancel' : 'Edit';
+  
   useEffect(() => {
     dispatch(getProductDetails(productID));
   }, [productID, dispatch]);
