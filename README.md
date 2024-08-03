@@ -1,6 +1,9 @@
 # Website Link
 https://breaking-bug-frontend-five.vercel.app/
 
+# Google Sheet Link -
+https://docs.google.com/spreadsheets/d/1cLvXGgV3gJ-ZkdH0gx2dLcY7X3KDnbdKEHrleY-KbIo/edit?usp=sharing
+
 # Breaking Bug - Frontend Repository
 
 <img src="https://images.prismic.io/ieeemuj/Zqu58B5LeNNTxuyE_BreakingBugBanner.png?auto=format,compress" alt="Breaking Bug Poster">
