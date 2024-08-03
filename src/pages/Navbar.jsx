@@ -38,7 +38,7 @@ const Navbar = () => {
             console.log(currentUser);
             dispatch(updateCustomer(currentUser, currentUser._id));
         }
-    }, [currentRole, currentUser, dispatch, ancorElNav])
+    }, [currentRole, currentUser, dispatch, anchorElNav])
 
     
     const [anchorElUser, setAnchorElUser] = React.useState(null);
