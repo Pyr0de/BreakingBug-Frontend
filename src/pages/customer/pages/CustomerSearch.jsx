@@ -13,7 +13,7 @@ const CustomerSearch = ({ mode }) => {
 
     const { filteredProducts } = useSelector(state => state.user);
 
-    const handleSearch = () => {
+    const handleSearch = (event) => {
         event.preventDefault(); 
 
         dispatch(getSearchedProducts("searchProduct", searchTerm));
