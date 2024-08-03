@@ -13,7 +13,7 @@ export const timeAgo = (date) => {
         const hours = Math.floor(timeDifference / 3600000);
         return `${hours} hour${hours !== 1 ? 's' : ''} ago`;
     } else {
-        return `on ${date.toLocaleDateString(undefined, options)}`;
+        return `on ${today.toLocaleDateString(undefined, options)}`;
     }
 };
 
