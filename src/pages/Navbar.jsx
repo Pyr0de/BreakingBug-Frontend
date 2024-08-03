@@ -29,7 +29,7 @@ const Navbar = () => {
     const { currentUser, currentRole } = useSelector(state => state.user);
 
     const totalQuantity = currentUser && currentUser.cartDetails && 0;
-
+    const [anchorElNav, setAnchorElNav] = React.useState(null);
     const navigate = useNavigate()
     const dispatch = useDispatch();
 
@@ -40,7 +40,7 @@ const Navbar = () => {
         }
     }, [currentRole, currentUser, dispatch, ancorElNav])
 
-    const [anchorElNav, setAnchorElNav] = React.useState(null);
+    
     const [anchorElUser, setAnchorElUser] = React.useState(null);
     const [anchorElSign, setAnchorElSign] = React.useState(null);
 
