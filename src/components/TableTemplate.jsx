@@ -33,7 +33,7 @@ const TableTemplate = ({columns, rows}) => {
                         <StyledTableCell key={column.Id} align={column.align}>
                           {
                             column.format && typeof value === 'number'
-                              ? column.format(id)
+                              ? column.format(column.Id)
                               : value
                           }
                         </StyledTableCell>
