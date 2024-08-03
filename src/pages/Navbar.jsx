@@ -55,7 +55,9 @@ const Navbar = () => {
     const handleOpenCart = () => {
         setIsCartOpen(false);
     };
-
+    const handleCloseCart = () => {
+        setIsCartOpen(true);
+    };
     // Navigation Menu
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
