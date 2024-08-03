@@ -302,6 +302,8 @@ export const {
     getFailed,
     getError,
     getSearchFailed,
+    getCustomersListFailed,
+    setFilteredProducts,
     customersListSuccess,
     getSpecificProductsFailed,
     specificProductSuccess,
