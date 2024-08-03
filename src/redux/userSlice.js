@@ -170,16 +170,28 @@ const userSlice = createSlice({
         },
 
         isTokenValid: (state) => {
-            const decodedToken = jwtDecode(state.currentToken);
-            if (state.currentToken) {              state.isLoggedIn = true;
-            } else {
+            try {
+                if (state.currentToken) {
+                    const decodedToken = jwtDecode(state.currentToken);
+                    state.isLoggedIn = true;
+                } else {
+                    localStorage.removeItem('user');
+                    state.currentUser = null;
+                    state.currentRole = null;
+                    state.currentToken = null;
+                    state.status = 'idle';
+                    state.response = null;
+                    state.error = null;
+                    state.isLoggedIn = false;
+                }
+            } catch (error) {
                 localStorage.removeItem('user');
                 state.currentUser = null;
                 state.currentRole = null;
                 state.currentToken = null;
                 state.status = 'idle';
                 state.response = null;
-                state.error = null;
+                state.error = 'Invalid token';
                 state.isLoggedIn = false;
             }
         },
