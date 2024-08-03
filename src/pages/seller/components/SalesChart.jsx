@@ -18,7 +18,7 @@ import { useNavigate } from 'react-router-dom';
 const SalesChart = ({  }) => {
 
     const navigate = useNavigate();
-
+    const type = "line";
     return (
         <Card sx={{ backgroundImage: "linear-gradient(320deg, rgb(58 163 171 / 32%) 0%, rgb(8 23 198 / 32%) 100%)" }}>
             <CardHeader
