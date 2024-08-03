@@ -40,7 +40,7 @@ const TableTemplate = ({columns, rows}) => {
                       );
                     })}
                     <StyledTableCell align="center">
-                      <ButtonHaver row={row}/>
+                      {/* <ButtonHaver row={row}/> */}
                     </StyledTableCell>
                   </StyledTableRow>
                 );
