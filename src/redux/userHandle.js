@@ -26,6 +26,8 @@ import {
     updateCurrentUser,
 } from './userSlice';
 
+
+
 export const authUser = (fields, role, mode) => async (dispatch) => {
     dispatch(authRequest());
 
@@ -158,7 +160,7 @@ export const getProductDetails = (id) => async (dispatch) => {
     }
 }
 
-export const getCustomers = (id) => async (dispatch) => {
+export const getCustomers = (address,id) => async (dispatch) => {
     dispatch(getRequest());
 
     try {
