@@ -14,14 +14,17 @@ const Products = ({ productData }) => {
 
   const itemsPerPage = 9;
 
-  const { currentRole, responseSearch } = useSelector();
+  const { currentRole, responseSearch } = useSelector((state) => ({
+    currentRole: state.user?.currentRole,
+    responseSearch: state.products?.responseSearch
+  }));
   const [currentPage, setCurrentPage] = useState(1);
   const [showPopup, setShowPopup] = useState(false);
   const [message, setMessage] = useState("");
 
   const indexOfLastItem = currentPage * itemsPerPage;
-  const indexOfFirstItem = indexOfLastItem + itemsPerPage;
-  const currentItems = (indexOfFirstItem, indexOfLastItem);
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = productData.slice(indexOfFirstItem, indexOfLastItem);
 
   const handleAddToCart = (event, product) => {
     event.stopPropagation();
@@ -90,7 +93,7 @@ const Products = ({ productData }) => {
           count={Math.ceil(productData.length / itemsPerPage)}
           page={currentPage}
           color="secondary"
-
+          onChange={(event, value) => setCurrentPage(value)}
         />
       </Container>
 
